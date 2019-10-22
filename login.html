@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% include "newblog.html" %}
+
+{% block content %}
+
+<h1>Log in to Build-A-Blog</h1>
+
+<p>If you don't have an account you can <a href="/register">register</a> for one</p>
+<form action="/login" method="post">
+    {{ form.csrf_token }}
+    {{ form.hidden_tag() }} <!----when accessing variables in template, wrap in double braces-->
+
+
+   
+    
+    <table>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+                <input name="email" type="email" value="{{ email }}">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Login">
+</form>
+<style>
+    h1{
+        color:blueviolet;
+    }
+</style>
+{% endblock %}

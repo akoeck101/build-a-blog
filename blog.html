@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% include "newblog.html" %}
+
+
+
+
+{% block content %}
+
+
+<title>
+    Build-A-Blog
+</title>
+<h1>Build-A-Blog</h1>
+    <body>
+        {% for post in posts %}
+       
+       
+        <h1><a href="/posts_on_click">{{post.title}}</a></h1>
+
+        <p>Author: {{ post.author.username }}</p>
+        <p>Date Posted: {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+        <p>{{ post.content }}</p>
+        {% endfor %}
+    </body>
+    <style>
+        h1{
+            color:palevioletred;
+        }
+        </style>
+
+{% endblock %}

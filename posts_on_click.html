@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% include "newblog.html" %}
+
+{% block content %}
+
+<h1>herro? work damn it</h1>
+
+<body>
+    {% if condition==True %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+    
+    {% for post in posts_again %}
+
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+
+    {% endfor %}
+   
+</body>
+
+<style>
+    h1{
+        text-align:center;
+    }
+    </style>
+
+{% endblock %}

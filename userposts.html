@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% include "newblog.html" %}
+
+{% block content %}
+
+<h1>Add A New Post</h1>
+
+
+    <form method="post">
+        <label for="Title">Title for your new blog:</label>
+        <br>
+        <input id="Title" type="text"  name="title"  />
+    </form>
+    <br>
+
+    <form method="post" id="yournewpost">
+        <label for="yournewpost">Your new post:</label>
+     
+        <br>  
+    </form>
+
+    <textarea form ="yournewpost" name="yournewpost" id="yournewpost" cols="35" rows='10' wrap="soft"></textarea>
+    <br>
+    <input type='submit' name='fffff'>
+
+
+<style>
+        h1{
+            text-align:center;
+        }
+        </style>
+
+{% endblock %}
